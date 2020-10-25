@@ -40,7 +40,12 @@ namespace CompraAi
             containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<Autenticacao>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<Principal, PrincipalViewModel>();
+            containerRegistry.RegisterForNavigation<GerenciamentoFamilia, GerenciamentoFamiliaViewModel>();
+            //containerRegistry.RegisterForNavigation<LoginFacebook>();
+            //containerRegistry.RegisterForNavigation<Profile>();
         }
     }
 }

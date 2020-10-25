@@ -1,100 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CompraAi.Views.MainPage"
-             x:Name="CpMainPage"
-             Title="{Binding Title}">
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:local="clr-namespace:CompraAi.Views"
+            xmlns:local2="clr-namespace:CompraAi.Uteis"
+            x:Class="CompraAi.Views.MainPage"
+            BackgroundColor="{DynamicResource CorBarraNavegacao}"
+             BarTextColor="{DynamicResource CorTextoBarraNavegacao}"
+            NavigationPage.HasNavigationBar="False"
+            >
+    <!--Pages can be added as references or inline-->
+    <!--<ContentPage Title="Tab 1" />
+    <ContentPage Title="Tab 2" />
+    <ContentPage Title="Tab 3" />-->
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Hello World!" />
-        <Button Text="Fazer Login com Facebook" x:Name="btnLogar" Clicked="btnLogar_Clicked" />
-        <ListView x:Name="LvItens"            
-                              AutomationId="LvItens"
-                              IsVisible="true"
-                              ItemsSource="{Binding Itens}"
-                              HasUnevenRows="true" 
-                              SeparatorVisibility="None"
-                                  VerticalOptions="FillAndExpand"                                  
-                                  BackgroundColor="Transparent"
-                                  SelectionMode="None">
-            <x:Arguments>
-                <ListViewCachingStrategy>RecycleElement</ListViewCachingStrategy>
-            </x:Arguments>
-            <!-- ITENS da LISTA : Cards (frames) de cada item -->
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.View>
-                            <Frame Padding="0,0,0,0" CornerRadius="0" HasShadow="True"
-                                                   BackgroundColor="DarkSeaGreen"                                                   
-                                                   IsClippedToBounds="True"
-                                                   BorderColor="Transparent">
-                                <Frame.OutlineColor>
-                                    <OnPlatform x:TypeArguments="Color"  Android="LightGray"  iOS="LightGray"/>
-                                </Frame.OutlineColor>
-                                <Frame.Margin>
-                                    <OnPlatform x:TypeArguments="Thickness" Android="15,0,15,20" iOS="15,0,15,20" />
-                                </Frame.Margin>
+    <NavigationPage Title="Principal" IconImageSource="{local2:ExtensaoRecursosImagem CompraAi.Recursos.Imagens.IconeCasa.png}">
+        <x:Arguments>
+            <local:Principal />
+        </x:Arguments>
+    </NavigationPage>
 
-                                <StackLayout HorizontalOptions="FillAndExpand"
-                                                                VerticalOptions="FillAndExpand"
-                                                                Orientation="Vertical"
-                                                                BackgroundColor="White"
-                                                                Padding="25,5,0,20"
-                                                                Spacing="0">
+    <NavigationPage Title="Família"  IconImageSource="{local2:ExtensaoRecursosImagem CompraAi.Recursos.Imagens.IconeUsuarios.png}">
+        <x:Arguments>
+            <local:GerenciamentoFamilia />
+        </x:Arguments>
+    </NavigationPage>
 
-                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0,0,5,0">
 
-                                        <Label          Text="Id: " 
-                                                            FontAttributes="Bold" 
-                                                            FontSize="Medium"
-                                                            TextColor="DarkOliveGreen"/>
-                                        <Label  x:Name="LblItem" 
-                                                            AutomationId="LblDescricaoItem"
-                                                            Text="{Binding  ItemId}"                                                             
-                                                            FontAttributes="None" 
-                                                            FontSize="Medium"
-                                                            TextColor="DarkOliveGreen"/>
-
-                                    </StackLayout>
-                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0,0,5,0">
-                                        <Label  Text="Telefone: "                                                           
-                                                            FontAttributes="None" 
-                                                            FontSize="Small"
-                                                            TextColor="DarkOliveGreen"/>
-                                        <Label  x:Name="lblTelefone" 
-                                                            AutomationId="lblTelefone"
-                                                            Text="{Binding Descricao}"                                                           
-                                                            FontAttributes="None" 
-                                                            FontSize="Small"
-                                                            TextColor="DarkOliveGreen"/>
-
-                                    </StackLayout>
-                                    <StackLayout  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="0,20,20,0"  IsVisible="{Binding VisibilidadeDiasVendidos}">
-                                        <Button  
-                                                        x:Name="BtnExcluirItem"
-                                                        AutomationId="BtnExcluirItem" 
-                                                        Text="Excluir"
-                                                        IsVisible="true"
-                                                        BackgroundColor="LightGreen"
-                                                        TextColor="DarkGreen"                                                       
-                                                        FontSize="Medium"   
-                                                        FontAttributes="Bold"
-                                                        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
-                                                        Command="{Binding Source={x:Reference CpMainPage}, Path=BindingContext.ExcluirItemCommand}"  
-                                                        CommandParameter="{Binding .}"
-                                                      />
-                                    </StackLayout>
-                                    <StackLayout.Margin>
-                                        <OnPlatform x:TypeArguments="Thickness" Android="10,0,0,0" iOS="10,0,0,0" />
-                                    </StackLayout.Margin>
-                                </StackLayout>
-                            </Frame>
-                        </ViewCell.View>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
-
-</ContentPage>
+</TabbedPage>

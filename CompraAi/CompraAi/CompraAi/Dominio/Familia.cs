@@ -4,14 +4,11 @@ using System.Text;
 
 namespace CompraAi.Dominio
 {
-    public class Item
+    public class Familia
     {
-        public Guid ItemId { get; set; }
         public Guid FamiliaId { get; set; }
-        public Guid UsuarioId { get; set; }
-        public Guid StatusId { get; set; }
-        public string Descricao { get; set; }
-        public byte[] ImagemProduto { get; set; }
+        public string Nome { get; set; }
+        public string Codigo { get; set; }
         public DateTime CriadoEm { get; set; }
         public DateTime? AlteradoEm { get; set; }
     }

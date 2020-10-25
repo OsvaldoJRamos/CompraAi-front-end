@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CompraAi.Views.GerenciamentoFamilia"
+             Title="{Binding Title}"
+             StyleClass="ConteudoTela"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<StackLayout Style="{StaticResource stackLayoutStyle}">
+                <Label Text="1."/>
+                <Label Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                        tempor incididunt ut labore et dolor e magna aliqua." />
+            </StackLayout>-->
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label 
+                    Text="Família:" 
+                    FontAttributes="None" 
+                    FontSize="Large" 
+                    TextColor="{DynamicResource CorTextoPadrao}" />
+                <Label 
+                    x:Name="LblNomeFamilia" 
+                    AutomationId="LblNomeFamilia" 
+                    Text="{Binding Familia.Nome}"
+                    FontAttributes="None" 
+                    FontSize="Large" 
+                    TextColor="{DynamicResource CorTextoPadrao}" />
+                
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label 
+                    Text="Código da família:" 
+                    FontAttributes="None" 
+                    FontSize="Medium" 
+                    TextColor="{DynamicResource CorTextoPadrao}" />
+                <Label 
+                    x:Name="LblCodigoFamilia" 
+                    AutomationId="LblCodigoFamilia" 
+                    Text="{Binding Familia.Codigo}"
+                    FontAttributes="None" 
+                    FontSize="Medium" 
+                    TextColor="{DynamicResource CorTextoPadrao}" />
+            </StackLayout>
+
+            <ListView 
+                x:Name="LvIntegrantes" 
+                AutomationId="LvIntegrantes" 
+                IsVisible="true" 
+                ItemsSource="{Binding Integrantes}" 
+                HasUnevenRows="true" 
+                SeparatorVisibility="None" 
+                VerticalOptions="FillAndExpand" 
+                BackgroundColor="Transparent" 
+                SelectionMode="None"
+                Margin="0,16,0,0">
+                <x:Arguments>
+                    <ListViewCachingStrategy>RecycleElement</ListViewCachingStrategy>
+                </x:Arguments>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Frame Padding="0,0,0,0" CornerRadius="0" HasShadow="True" BackgroundColor="{DynamicResource CorPrimaria}" IsClippedToBounds="True" BorderColor="Transparent">
+                                    <Frame.OutlineColor>
+                                        <OnPlatform x:TypeArguments="Color" Android="LightGray" iOS="LightGray" />
+                                    </Frame.OutlineColor>
+                                    <Frame.Margin>
+                                        <OnPlatform x:TypeArguments="Thickness" Android="15,0,15,20" iOS="15,0,15,20" />
+                                    </Frame.Margin>
+                                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="White" Padding="25,5,0,20" Spacing="0">
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0,0,5,0">
+                                            <Label x:Name="LblItem" AutomationId="LblDescricaoItem" Text="{Binding  Nome}" FontAttributes="None" FontSize="Medium" TextColor="DarkOliveGreen" />
+                                        </StackLayout>
+                                        <StackLayout.Margin>
+                                            <OnPlatform x:TypeArguments="Thickness" Android="10,0,0,0" iOS="10,0,0,0" />
+                                        </StackLayout.Margin>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

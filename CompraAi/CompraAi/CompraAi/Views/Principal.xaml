@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="CompraAi.Views.Principal"
+    x:Name="CpPrincipal"
+    Title="{Binding Title}"
+    BackgroundColor="{DynamicResource CorFundoPagina}">
+    <ContentPage.Content>
+       
+
+        <AbsoluteLayout>
+
+            <StackLayout>
+                <Label Text="Welcome to Xamarin.Forms!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                <ListView x:Name="LvItens" AutomationId="LvItens" IsVisible="true" ItemsSource="{Binding Itens}" HasUnevenRows="true" SeparatorVisibility="None" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" SelectionMode="None">
+                    <x:Arguments>
+                        <ListViewCachingStrategy>RecycleElement</ListViewCachingStrategy>
+                    </x:Arguments>
+                    <!-- ITENS da LISTA : Cards (frames) de cada item -->
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Frame Padding="0,0,0,0" CornerRadius="0" HasShadow="True" BackgroundColor="{DynamicResource CorPrimaria}" IsClippedToBounds="True" BorderColor="Transparent">
+                                        <Frame.OutlineColor>
+                                            <OnPlatform x:TypeArguments="Color" Android="LightGray" iOS="LightGray" />
+                                        </Frame.OutlineColor>
+                                        <Frame.Margin>
+                                            <OnPlatform x:TypeArguments="Thickness" Android="15,0,15,20" iOS="15,0,15,20" />
+                                        </Frame.Margin>
+                                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="White" Padding="25,5,0,20" Spacing="0">
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0,0,5,0">
+                                                <Label x:Name="LblDescricaoItem" AutomationId="LblDescricaoItem" Text="{Binding  Descricao}" FontAttributes="None" FontSize="Medium" TextColor="{DynamicResource CorTextoPadrao}" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0,0,5,0">
+                                                <Label Text="Data cadastro: " FontAttributes="None" FontSize="Small" TextColor="{DynamicResource CorTextoPadrao}" />
+                                                <Label x:Name="LblDataCriacao" AutomationId="LblDataCriacao" Text="{Binding CriadoEm}" FontAttributes="None" FontSize="Small" TextColor="{DynamicResource CorTextoPadrao}" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,16,0,0">
+                                                <Button x:Name="BtnExcluirItem" 
+                                                    AutomationId="BtnExcluirItem" 
+                                                    Text="Excluir" 
+                                                    IsVisible="true" 
+                                                    TextColor="{DynamicResource CorTextoPerigo}"
+                                                    BackgroundColor="{DynamicResource CorPerigo}"
+                                                    FontSize="Medium" 
+                                                    FontAttributes="Bold" 
+                                                    Command="{Binding Source={x:Reference CpPrincipal}, Path=BindingContext.ExcluirItemCommand}" 
+                                                    CommandParameter="{Binding .}" />
+                                                <Button x:Name="BtnComprarItem" 
+                                                    AutomationId="BtnComprarItem" 
+                                                    Text="Comprar" 
+                                                    IsVisible="true" 
+                                                    TextColor="{DynamicResource CorTextoSucesso}"
+                                                    BackgroundColor="{DynamicResource CorSucesso}"
+                                                    FontSize="Medium" 
+                                                    FontAttributes="Bold" 
+                                                    Command="{Binding Source={x:Reference CpPrincipal}, Path=BindingContext.ComprarItemCommand}" 
+                                                    CommandParameter="{Binding .}" />
+                                            </StackLayout>
+                                            <StackLayout.Margin>
+                                                <OnPlatform x:TypeArguments="Thickness" Android="10,0,0,0" iOS="10,0,0,0" />
+                                            </StackLayout.Margin>
+                                        </StackLayout>
+                                    </Frame>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+            <!--<ImageButton Source="editFAB.png" 
+                BackgroundColor="Transparent"
+                AbsoluteLayout.LayoutFlags="PositionProportional"  
+                AbsoluteLayout.LayoutBounds=".95,.95,80,80" 
+                Clicked="Handle_Clicked" />-->
+
+            <Button 
+                x:Name="BtnFab"
+                AbsoluteLayout.LayoutFlags="PositionProportional"  
+                AbsoluteLayout.LayoutBounds=".95,.95,80,80" Text="+" CornerRadius="100"
+                    BackgroundColor="{DynamicResource CorSecundaria}" TextColor="{DynamicResource CorTextoSecundaria}"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

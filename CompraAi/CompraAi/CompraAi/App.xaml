@@ -6,6 +6,8 @@
     <Application.Resources>
 
         <!-- Application resource dictionary -->
-
+        <ResourceDictionary Source="Estilos/TemaCompraAi.xaml" />
+        
     </Application.Resources>
+
 </prism:PrismApplication>

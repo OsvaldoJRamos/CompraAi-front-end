@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    >
+    <Color x:Key="CorFundoPagina">White</Color>
+    <Color x:Key="CorBarraNavegacao">WhiteSmoke</Color>
+    <Color x:Key="CorTextoBarraNavegacao">Black</Color>
+    <Color x:Key="CorPrimaria">#2296f3</Color>
+    <Color x:Key="CorPrimariaClara">#6ec6ff</Color>
+    <Color x:Key="CorPrimariaEscura">#0069c0</Color>
+    <Color x:Key="CorSecundaria">#ff4081</Color>
+    <Color x:Key="CorSecundariaClara">#ff79b0</Color>
+    <Color x:Key="CorSecundariaEscura">#c60055</Color>
+    <Color x:Key="CorTextoPrimaria">White</Color>
+    <Color x:Key="CorTextoSecundaria">White</Color>
+    <Color x:Key="CorTextoPadrao">#404040</Color>
+    <Color x:Key="CorTextoEscuro">#343a40</Color>
+    <Color x:Key="CorTextoClaro">#f8f9fa</Color>
+    <Color x:Key="CorTransparente">Transparent</Color>
+    <Color x:Key="CorSucesso">#28a745</Color>
+    <Color x:Key="CorPerigo">#dc3545</Color>
+    <Color x:Key="CorAlerta">#ffc107</Color>
+    <Color x:Key="CorTextoSucesso">White</Color>
+    <Color x:Key="CorTextoPerigo">White</Color>
+    <Color x:Key="CorTextoAlerta">White</Color>
+    <Color x:Key="CorDesabilitado">#6c757d</Color>
+
+    <!--<Style x:Key="ConteudoTela" TargetType="ContentPage">
+        <Setter Property="Padding" Value = "16,16,16,16"/>
+        <Setter Property="BackgroundColor" Value="Bisque" />
+    </Style>-->
+
+    <Style Class="ConteudoTela" TargetType="ContentPage" ApplyToDerivedTypes="true">
+        <Setter Property="Padding" Value = "16,16,16,16"/>
+    </Style>
+
+</ResourceDictionary>

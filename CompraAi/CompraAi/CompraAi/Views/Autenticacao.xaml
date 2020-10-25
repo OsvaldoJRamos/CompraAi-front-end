@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CompraAi.Views.Autenticacao">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Bem vindo ao Compra Aí!"
+                TextColor="{DynamicResource CorSecundaria}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button x:Name="BtnLoginFacebook" 
+                Text="Entrar com Facebook"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="BtnLoginFacebook_Clicked" />
+
+            <Button x:Name="BtnLoginAnonimo" 
+                Text="Entrar como Anônimo"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="BtnLoginAnonimo_Clicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
