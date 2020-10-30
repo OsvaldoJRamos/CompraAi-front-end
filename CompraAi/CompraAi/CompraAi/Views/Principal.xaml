@@ -58,6 +58,16 @@
                                                     FontAttributes="Bold" 
                                                     Command="{Binding Source={x:Reference CpPrincipal}, Path=BindingContext.ComprarItemCommand}" 
                                                     CommandParameter="{Binding .}" />
+                                                <Button x:Name="BtnFotoItem" 
+                                                    AutomationId="BtnFotoItem" 
+                                                    Text="Foto" 
+                                                    IsVisible="true" 
+                                                    TextColor="{DynamicResource CorTextoSucesso}"
+                                                    BackgroundColor="Black"
+                                                    FontSize="Medium" 
+                                                    FontAttributes="Bold" 
+                                                    Command="{Binding Source={x:Reference CpPrincipal}, Path=BindingContext.FotoItemCommand}" 
+                                                    CommandParameter="{Binding .}" />
                                             </StackLayout>
                                             <StackLayout.Margin>
                                                 <OnPlatform x:TypeArguments="Thickness" Android="10,0,0,0" iOS="10,0,0,0" />
@@ -80,7 +90,13 @@
             <Button 
                 x:Name="BtnFab"
                 AbsoluteLayout.LayoutFlags="PositionProportional"  
-                AbsoluteLayout.LayoutBounds=".95,.95,80,80" Text="+" CornerRadius="100"
+                AbsoluteLayout.LayoutBounds=".95,.95,65,65" Text="+" Command="{Binding BotaomaisCommand}" CornerRadius="100" 
+                    BackgroundColor="{DynamicResource CorSecundaria}" TextColor="{DynamicResource CorTextoSecundaria}"/>
+
+            <Button 
+                x:Name="Btnpesquisa"
+                AbsoluteLayout.LayoutFlags="PositionProportional"  
+                AbsoluteLayout.LayoutBounds=".95,.75,65,65" Text="Lupa" Command="{Binding BotaopesquisaCommand}" CornerRadius="100" 
                     BackgroundColor="{DynamicResource CorSecundaria}" TextColor="{DynamicResource CorTextoSecundaria}"/>
         </AbsoluteLayout>
     </ContentPage.Content>

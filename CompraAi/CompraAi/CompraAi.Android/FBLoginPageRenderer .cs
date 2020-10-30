@@ -15,8 +15,7 @@ namespace XF_LoginFacebook.Droid
 
     public class FBLoginPageRenderer : PageRenderer
     {
-
-
+        [Obsolete]
         public FBLoginPageRenderer()
         {
 

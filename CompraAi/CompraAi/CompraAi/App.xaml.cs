@@ -46,6 +46,8 @@ namespace CompraAi
             containerRegistry.RegisterForNavigation<GerenciamentoFamilia, GerenciamentoFamiliaViewModel>();
             //containerRegistry.RegisterForNavigation<LoginFacebook>();
             //containerRegistry.RegisterForNavigation<Profile>();
+            containerRegistry.RegisterForNavigation<cadastraritem, cadastraritemViewModel>();
+            containerRegistry.RegisterForNavigation<pesquisaritem, pesquisaritemViewModel>();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CompraAi.Dominio;
+using CompraAi.Views;
 using Prism.Commands;
 using Prism.Navigation;
 using Prism.Services;
@@ -71,6 +72,17 @@ namespace CompraAi.ViewModels
             await PageDialogService.DisplayAlertAsync("Compra item", $"Compra do item '{item.Descricao}' confirmada com sucesso.", "OK");
         }
 
-        
+        public DelegateCommand BotaomaisCommand => new DelegateCommand(async () => await ExecuteBotaomaisAsync());
+
+        private async Task ExecuteBotaomaisAsync()
+        {
+            await NavigationService.NavigateAsync($"{nameof(cadastraritem)}");
+        }
+
+        public DelegateCommand BotaopesquisaCommand => new DelegateCommand(async () => await ExecuteBotaopesquisaAsync());
+        private async Task ExecuteBotaopesquisaAsync()
+        {
+            await NavigationService.NavigateAsync($"{nameof(pesquisaritem)}");
+        }
     }
 }

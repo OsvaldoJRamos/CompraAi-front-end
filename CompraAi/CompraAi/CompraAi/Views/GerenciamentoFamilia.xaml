@@ -84,7 +84,10 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
+            <Button Text="Adicionar Membro"></Button>
+            <Button Text="Exlcuir Membro"></Button>
+            <Button Text="Compartilhar Link da Familia"></Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

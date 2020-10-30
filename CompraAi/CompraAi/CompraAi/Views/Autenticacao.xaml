@@ -5,9 +5,21 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Bem vindo ao Compra Aí!"
+                   FontSize="Large"
                 TextColor="{DynamicResource CorSecundaria}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Login" VerticalOptions="Start" HorizontalOptions="Center" FontSize="Large"></Label>
+            <Entry Placeholder="nome" VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="200"></Entry>
+            <Label Text="Senha" VerticalOptions="Start" HorizontalOptions="Center" FontSize="Large" ></Label>
+            <Entry VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="200"></Entry>
+
+            <Button x:Name="BtnLogin" 
+                Text="Entrar"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="BtnLoginFacebook_Clicked" />
 
             <Button x:Name="BtnLoginFacebook" 
                 Text="Entrar com Facebook"
