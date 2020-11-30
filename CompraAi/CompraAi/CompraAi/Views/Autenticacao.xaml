@@ -1,37 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CompraAi.Views.Autenticacao">
+             x:Class="CompraAi.Views.Autenticacao"
+             >
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Bem vindo ao Compra Aí!"
-                   FontSize="Large"
-                TextColor="{DynamicResource CorSecundaria}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="#2e3142">
+            <Image Source="logo.png"
+                   Aspect="AspectFill"></Image>
+            
 
-            <Label Text="Login" VerticalOptions="Start" HorizontalOptions="Center" FontSize="Large"></Label>
-            <Entry Placeholder="nome" VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="200"></Entry>
-            <Label Text="Senha" VerticalOptions="Start" HorizontalOptions="Center" FontSize="Large" ></Label>
-            <Entry VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="200"></Entry>
+            
+
+            <Label Text="Login" VerticalOptions="Start" HorizontalOptions="Center" FontSize="Large" TextColor="White"></Label>
+            <Entry PlaceholderColor="White" VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="200" TextColor="White"></Entry>
+            <Label Text="Senha" VerticalOptions="Start" HorizontalOptions="Center" FontSize="Large" TextColor="White"></Label>
+            <Entry VerticalOptions="Start" PlaceholderColor="White" HorizontalOptions="CenterAndExpand" WidthRequest="200" TextColor="White"></Entry>
 
             <Button x:Name="BtnLogin" 
                 Text="Entrar"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
-                Clicked="BtnLoginFacebook_Clicked" />
+                Clicked="BtnLoginFacebook_Clicked" 
+                    TextColor="White"
+                    BackgroundColor="#2a97be"
+                    BorderColor="#8d9298"                  
+                    BorderWidth="5"
+                    CornerRadius="10"
+                    WidthRequest="200"
+                    HeightRequest="50"/>
 
             <Button x:Name="BtnLoginFacebook" 
                 Text="Entrar com Facebook"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
-                Clicked="BtnLoginFacebook_Clicked" />
+                Clicked="BtnLoginFacebook_Clicked"
+                    TextColor="White"
+                    BackgroundColor="#2a97be"
+                    BorderColor="#8d9298"                  
+                    BorderWidth="5"
+                    CornerRadius="10"
+                    WidthRequest="200"
+                    HeightRequest="50"/>
+            <Image Source="facebook.png" WidthRequest="100"></Image>
 
             <Button x:Name="BtnLoginAnonimo" 
                 Text="Entrar como Anônimo"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
-                Clicked="BtnLoginAnonimo_Clicked" />
+                Clicked="BtnLoginAnonimo_Clicked"
+                    TextColor="White"
+                    BackgroundColor="#2a97be"
+                    BorderColor="#8d9298"                  
+                    BorderWidth="5"
+                    CornerRadius="10"
+                    WidthRequest="200"
+                    HeightRequest="50"/>
 
         </StackLayout>
     </ContentPage.Content>

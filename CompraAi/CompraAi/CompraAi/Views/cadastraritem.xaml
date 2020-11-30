@@ -4,21 +4,49 @@
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="CompraAi.Views.cadastraritem"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             BackgroundColor="#36384d">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
 
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+    <StackLayout  BackgroundColor="#36384d" VerticalOptions="Center" HorizontalOptions="Center">
 
-            <Label Text="Cadastrar item na lista" FontSize="Large"></Label>
-            <Entry Placeholder="Descrição do Item"></Entry>
-            <Button Text="Cadastrar"></Button>
-        </StackLayout>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="End">
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
 
-            <Label Text="Cadastrar Foto do item" FontSize="Large"></Label>
-            <Button Text="Tirar Foto"></Button>
-            <Button Text="Galeria"></Button>
+            <Image Source="cesta2.jpg"></Image>
+            <Label Text="Cadastro de Item" FontSize="Large" HorizontalOptions="CenterAndExpand"
+                   TextColor="White"
+                   ></Label>
+            <Entry Placeholder="Descrição" TextColor="White" PlaceholderColor="White"></Entry>
+            <Button Text="Cadastrar"
+                    TextColor="White"
+                    BackgroundColor="#2a97be"
+                    BorderColor="#7f818d"                  
+                    BorderWidth="5"
+                    CornerRadius="10"
+                    WidthRequest="10"
+                    HeightRequest="50"></Button>
+        
+        
+                <Label Text="Cadastrar Foto do Item" FontSize="Large"
+                   TextColor="White"></Label>
+            <Button Text="Tirar Foto"                   
+                    TextColor="White"
+                    BackgroundColor="#2a97be"
+                    BorderColor="#7f818d"                  
+                    BorderWidth="5"
+                    CornerRadius="10"
+                    WidthRequest="10"
+                    HeightRequest="50" >
+            </Button>
+            <Button Text="Galeria"
+                    TextColor="White"
+                    BackgroundColor="#2a97be"
+                    BorderColor="#7f818d    "                  
+                    BorderWidth="5"
+                    CornerRadius="10"
+                    WidthRequest="10"
+                    HeightRequest="50"></Button>
+            
         </StackLayout>
     </StackLayout>
     

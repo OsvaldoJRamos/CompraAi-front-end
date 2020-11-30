@@ -4,6 +4,7 @@
              x:Class="CompraAi.Views.GerenciamentoFamilia"
              Title="{Binding Title}"
              StyleClass="ConteudoTela"
+             BackgroundColor="#36384d"
              >
     <ContentPage.Content>
         <StackLayout>
@@ -12,20 +13,22 @@
                 <Label Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                         tempor incididunt ut labore et dolor e magna aliqua." />
             </StackLayout>-->
-            
+            <Image Source="grupo.png"
+                   WidthRequest="100"></Image>
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <Label 
                     Text="Família:" 
+                    
                     FontAttributes="None" 
                     FontSize="Large" 
-                    TextColor="{DynamicResource CorTextoPadrao}" />
+                    TextColor="White" />
                 <Label 
                     x:Name="LblNomeFamilia" 
                     AutomationId="LblNomeFamilia" 
                     Text="{Binding Familia.Nome}"
                     FontAttributes="None" 
                     FontSize="Large" 
-                    TextColor="{DynamicResource CorTextoPadrao}" />
+                    TextColor="White" />
                 
             </StackLayout>
 
@@ -34,14 +37,14 @@
                     Text="Código da família:" 
                     FontAttributes="None" 
                     FontSize="Medium" 
-                    TextColor="{DynamicResource CorTextoPadrao}" />
+                    TextColor="White" />
                 <Label 
                     x:Name="LblCodigoFamilia" 
                     AutomationId="LblCodigoFamilia" 
                     Text="{Binding Familia.Codigo}"
                     FontAttributes="None" 
                     FontSize="Medium" 
-                    TextColor="{DynamicResource CorTextoPadrao}" />
+                    TextColor="White" />
             </StackLayout>
 
             <ListView 
@@ -72,7 +75,7 @@
                                     </Frame.Margin>
                                     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="White" Padding="25,5,0,20" Spacing="0">
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0,0,5,0">
-                                            <Label x:Name="LblItem" AutomationId="LblDescricaoItem" Text="{Binding  Nome}" FontAttributes="None" FontSize="Medium" TextColor="DarkOliveGreen" />
+                                            <Label x:Name="LblItem"  AutomationId="LblDescricaoItem" Text="{Binding  Nome}" FontAttributes="None" FontSize="Medium" TextColor="Black" />
                                         </StackLayout>
                                         <StackLayout.Margin>
                                             <OnPlatform x:TypeArguments="Thickness" Android="10,0,0,0" iOS="10,0,0,0" />
@@ -84,9 +87,34 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Adicionar Membro"></Button>
-            <Button Text="Exlcuir Membro"></Button>
-            <Button Text="Compartilhar Link da Familia"></Button>
+            <Button Text="Adicionar Membro"
+                    
+                    TextColor="White"
+                    BackgroundColor="#2a97be"
+                    BorderColor="#757881"                  
+                    BorderWidth="5"
+                    CornerRadius="10"
+                    WidthRequest="10"
+                    HeightRequest="50"></Button>
+            <Button Text="Exlcuir Membro"
+                    TextColor="White"
+                    BackgroundColor="#2a97be"
+                    BorderColor="#757881"                  
+                    BorderWidth="5"
+                    CornerRadius="10"
+                    WidthRequest="10"
+                    HeightRequest="50"></Button>
+            <Button Text="Compartilhar Link da Familia"
+                    TextColor="White"
+                    BackgroundColor="#2a97be"
+                    BorderColor="#757881"    
+                    Command="{Binding BotaolinkCommand}"
+                    BorderWidth="5"
+                    CornerRadius="10"
+                    WidthRequest="10"
+                    HeightRequest="50">
+                
+            </Button>
             
         </StackLayout>
     </ContentPage.Content>

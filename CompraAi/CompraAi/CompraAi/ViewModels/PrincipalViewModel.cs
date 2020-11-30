@@ -77,12 +77,12 @@ namespace CompraAi.ViewModels
         private async Task ExecuteBotaomaisAsync()
         {
             await NavigationService.NavigateAsync($"{nameof(cadastraritem)}");
+
+            
         }
 
-        public DelegateCommand BotaopesquisaCommand => new DelegateCommand(async () => await ExecuteBotaopesquisaAsync());
-        private async Task ExecuteBotaopesquisaAsync()
-        {
-            await NavigationService.NavigateAsync($"{nameof(pesquisaritem)}");
-        }
+        
+
+
     }
 }

@@ -11,7 +11,7 @@
 
         <AbsoluteLayout>
 
-            <StackLayout>
+            <StackLayout BackgroundColor="#2e3141">
                 <Label Text="Welcome to Xamarin.Forms!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
                 <ListView x:Name="LvItens" AutomationId="LvItens" IsVisible="true" ItemsSource="{Binding Itens}" HasUnevenRows="true" SeparatorVisibility="None" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" SelectionMode="None">
                     <x:Arguments>
@@ -44,6 +44,9 @@
                                                     IsVisible="true" 
                                                     TextColor="{DynamicResource CorTextoPerigo}"
                                                     BackgroundColor="{DynamicResource CorPerigo}"
+                                                        BorderColor="#7f818d"                  
+                                                    BorderWidth="5"
+                                                        CornerRadius="10"
                                                     FontSize="Medium" 
                                                     FontAttributes="Bold" 
                                                     Command="{Binding Source={x:Reference CpPrincipal}, Path=BindingContext.ExcluirItemCommand}" 
@@ -54,6 +57,9 @@
                                                     IsVisible="true" 
                                                     TextColor="{DynamicResource CorTextoSucesso}"
                                                     BackgroundColor="{DynamicResource CorSucesso}"
+                                                        BorderColor="#7f818d"                  
+                                                    BorderWidth="5"
+                                                        CornerRadius="10"
                                                     FontSize="Medium" 
                                                     FontAttributes="Bold" 
                                                     Command="{Binding Source={x:Reference CpPrincipal}, Path=BindingContext.ComprarItemCommand}" 
@@ -63,7 +69,10 @@
                                                     Text="Foto" 
                                                     IsVisible="true" 
                                                     TextColor="{DynamicResource CorTextoSucesso}"
-                                                    BackgroundColor="Black"
+                                                    BackgroundColor="#2a97be"
+                                                        BorderColor="#7f818d"                  
+                                                    BorderWidth="5"
+                                                        CornerRadius="10"
                                                     FontSize="Medium" 
                                                     FontAttributes="Bold" 
                                                     Command="{Binding Source={x:Reference CpPrincipal}, Path=BindingContext.FotoItemCommand}" 
@@ -91,13 +100,9 @@
                 x:Name="BtnFab"
                 AbsoluteLayout.LayoutFlags="PositionProportional"  
                 AbsoluteLayout.LayoutBounds=".95,.95,65,65" Text="+" Command="{Binding BotaomaisCommand}" CornerRadius="100" 
-                    BackgroundColor="{DynamicResource CorSecundaria}" TextColor="{DynamicResource CorTextoSecundaria}"/>
+                    BackgroundColor="{DynamicResource CorSecundaria}" TextColor="{DynamicResource CorTextoSecundaria}" FontSize="Large"/>
 
-            <Button 
-                x:Name="Btnpesquisa"
-                AbsoluteLayout.LayoutFlags="PositionProportional"  
-                AbsoluteLayout.LayoutBounds=".95,.75,65,65" Text="Lupa" Command="{Binding BotaopesquisaCommand}" CornerRadius="100" 
-                    BackgroundColor="{DynamicResource CorSecundaria}" TextColor="{DynamicResource CorTextoSecundaria}"/>
+            
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
