@@ -65,6 +65,7 @@
                                                     Command="{Binding Source={x:Reference CpPrincipal}, Path=BindingContext.ComprarItemCommand}" 
                                                     CommandParameter="{Binding .}" />
                                                 <Button x:Name="BtnFotoItem" 
+                                                     Clicked="btnfoto"   
                                                     AutomationId="BtnFotoItem" 
                                                     Text="Foto" 
                                                     IsVisible="true" 
@@ -77,6 +78,7 @@
                                                     FontAttributes="Bold" 
                                                     Command="{Binding Source={x:Reference CpPrincipal}, Path=BindingContext.FotoItemCommand}" 
                                                     CommandParameter="{Binding .}" />
+                                                
                                             </StackLayout>
                                             <StackLayout.Margin>
                                                 <OnPlatform x:TypeArguments="Thickness" Android="10,0,0,0" iOS="10,0,0,0" />

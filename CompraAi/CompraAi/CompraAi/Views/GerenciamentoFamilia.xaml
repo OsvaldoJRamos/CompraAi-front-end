@@ -90,6 +90,7 @@
             <Button Text="Adicionar Membro"
                     
                     TextColor="White"
+                    Clicked="btnadicionarmembro"
                     BackgroundColor="#2a97be"
                     BorderColor="#757881"                  
                     BorderWidth="5"
@@ -97,6 +98,7 @@
                     WidthRequest="10"
                     HeightRequest="50"></Button>
             <Button Text="Exlcuir Membro"
+                    Clicked="btnexcluirmembro"
                     TextColor="White"
                     BackgroundColor="#2a97be"
                     BorderColor="#757881"                  
@@ -104,7 +106,8 @@
                     CornerRadius="10"
                     WidthRequest="10"
                     HeightRequest="50"></Button>
-            <Button Text="Compartilhar Link da Familia"
+            <Button Text="Link da Familia"
+                    Clicked="btnlink"
                     TextColor="White"
                     BackgroundColor="#2a97be"
                     BorderColor="#757881"    

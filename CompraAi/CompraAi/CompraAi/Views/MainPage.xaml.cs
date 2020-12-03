@@ -13,8 +13,19 @@ namespace CompraAi.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : Xamarin.Forms.TabbedPage
     {
+        string userId;
         public MainPage()
         {
+            InitializeComponent();
+
+            On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+
+            //TODO: Tratar quando o usuário estiver logado.
+            Navigation.PushAsync(new Autenticacao());
+        }
+        public MainPage(string id)
+        {
+            userId = id;
             InitializeComponent();
 
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);

@@ -23,7 +23,7 @@ namespace CompraAi.ViewModels
         public PrincipalViewModel(INavigationService navigationService, IPageDialogService pageDialogService)
             : base(navigationService, pageDialogService)
         {
-            Title = "Principal";
+            Title = "Lista de Itens";
             _itens = new ObservableCollection<Item>();
         }
 
@@ -80,8 +80,9 @@ namespace CompraAi.ViewModels
 
             
         }
-
         
+
+
 
 
     }

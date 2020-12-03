@@ -2,25 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CompraAi.Views.Autenticacao"
+             Title="{Binding Title}"
              >
     <ContentPage.Content>
         <StackLayout BackgroundColor="#2e3142">
             <Image Source="logo.png"
                    Aspect="AspectFill"></Image>
-            
 
-            
 
-            <Label Text="Login" VerticalOptions="Start" HorizontalOptions="Center" FontSize="Large" TextColor="White"></Label>
+
+
+            <Label Text="Nome" VerticalOptions="Start" HorizontalOptions="Center" FontSize="Large" TextColor="White"></Label>
             <Entry PlaceholderColor="White" VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="200" TextColor="White"></Entry>
-            <Label Text="Senha" VerticalOptions="Start" HorizontalOptions="Center" FontSize="Large" TextColor="White"></Label>
+            <Label Text="E-Mail" VerticalOptions="Start" HorizontalOptions="Center" FontSize="Large" TextColor="White"></Label>
             <Entry VerticalOptions="Start" PlaceholderColor="White" HorizontalOptions="CenterAndExpand" WidthRequest="200" TextColor="White"></Entry>
 
-            <Button x:Name="BtnLogin" 
+            <Button x:Name="BtnLoginAnonimo" 
                 Text="Entrar"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
-                Clicked="BtnLoginFacebook_Clicked" 
+                Clicked="BtnLoginAnonimo_Clicked"
                     TextColor="White"
                     BackgroundColor="#2a97be"
                     BorderColor="#8d9298"                  
@@ -43,11 +44,11 @@
                     HeightRequest="50"/>
             <Image Source="facebook.png" WidthRequest="100"></Image>
 
-            <Button x:Name="BtnLoginAnonimo" 
-                Text="Entrar como Anônimo"
+            <Button x:Name="BtnLogin" 
+                Text="Cadastro"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
-                Clicked="BtnLoginAnonimo_Clicked"
+                Clicked="btncadastro"
                     TextColor="White"
                     BackgroundColor="#2a97be"
                     BorderColor="#8d9298"                  
@@ -55,6 +56,10 @@
                     CornerRadius="10"
                     WidthRequest="200"
                     HeightRequest="50"/>
+
+            
+
+            
 
         </StackLayout>
     </ContentPage.Content>

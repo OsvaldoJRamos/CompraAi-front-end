@@ -16,6 +16,10 @@ namespace CompraAi
             : base(initializer)
         {
         }
+        /*public App()           
+        {
+            MainPage = new NavigationPage(new Autenticacao());
+        }*/
 
         protected override async void OnInitialized()
         {
@@ -47,7 +51,10 @@ namespace CompraAi
             //containerRegistry.RegisterForNavigation<LoginFacebook>();
             //containerRegistry.RegisterForNavigation<Profile>();
             containerRegistry.RegisterForNavigation<cadastraritem, cadastraritemViewModel>();
-            containerRegistry.RegisterForNavigation<pesquisaritem, pesquisaritemViewModel>();
+
+            
+            containerRegistry.RegisterForNavigation<cadastrousuario, cadastrousuarioViewModel>();
+            containerRegistry.RegisterForNavigation<mostrarArroz, mostrarArrozViewModel>();
         }
     }
 }

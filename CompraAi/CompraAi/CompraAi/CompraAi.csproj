@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewModels\pesquisaritemViewModel.cs" />
+    <Compile Remove="Views\pesquisaritem.xaml.cs" />
+    <Compile Remove="Views\PrismContentPage1.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\pesquisaritem.xaml" />
+    <EmbeddedResource Remove="Views\PrismContentPage1.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Recursos\Imagens\IconeCasa.png" />
     <None Remove="Recursos\Imagens\IconeUsuarios.png" />
     <None Remove="Recursos\Imagens\logo.PNG" />
@@ -18,10 +29,17 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.7" />
     <PackageReference Include="Xamarin.Auth" Version="1.7.0" />
     <PackageReference Include="Xamarin.Forms" Version="4.7.0.1239" />
     <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.5.3.2" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v10.0\Mono.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
@@ -40,10 +58,13 @@
     <EmbeddedResource Update="Views\cadastraritem.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\cadastrousuario.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\GerenciamentoFamilia.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\pesquisaritem.xaml">
+    <EmbeddedResource Update="Views\mostrarArroz.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Principal.xaml">

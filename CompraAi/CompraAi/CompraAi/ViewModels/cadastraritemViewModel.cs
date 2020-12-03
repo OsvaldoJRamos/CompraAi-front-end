@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Android.OS;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
@@ -15,5 +16,7 @@ namespace CompraAi.ViewModels
         {
             Title = "Cadastrar item";
         }
+        
+        
     }
 }

@@ -16,5 +16,19 @@ namespace CompraAi.Views
         {
             InitializeComponent();
         }
+        private async void btnadicionarmembro(object sender, EventArgs e)
+        {
+            string result = await DisplayPromptAsync("Novo Membro", "Digite o nome do membro que deseja adicionar");
+
+        }
+        private async void btnexcluirmembro(object sender, EventArgs e)
+        {
+            string result = await DisplayPromptAsync("Excluir Membro", "Digite o nome do membro que deseja excluir");
+
+        }
+        private async void btnlink(object sender, EventArgs e)
+        {
+            await DisplayAlert("Link da familia", "Alcantara/12345", "fechar");
+        }
     }
 }

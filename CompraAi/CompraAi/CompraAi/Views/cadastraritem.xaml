@@ -18,27 +18,22 @@
                    ></Label>
             <Entry Placeholder="Descrição" TextColor="White" PlaceholderColor="White"></Entry>
             <Button Text="Cadastrar"
+                    Clicked="btncaditem_clicked"
                     TextColor="White"
+                    
                     BackgroundColor="#2a97be"
                     BorderColor="#7f818d"                  
                     BorderWidth="5"
                     CornerRadius="10"
                     WidthRequest="10"
                     HeightRequest="50"></Button>
-        
-        
-                <Label Text="Cadastrar Foto do Item" FontSize="Large"
+
+
+            <Label Text="Cadastrar Foto do Item" FontSize="Large"
                    TextColor="White"></Label>
-            <Button Text="Tirar Foto"                   
-                    TextColor="White"
-                    BackgroundColor="#2a97be"
-                    BorderColor="#7f818d"                  
-                    BorderWidth="5"
-                    CornerRadius="10"
-                    WidthRequest="10"
-                    HeightRequest="50" >
-            </Button>
+
             <Button Text="Galeria"
+                    Clicked="btngaleria_clicked"
                     TextColor="White"
                     BackgroundColor="#2a97be"
                     BorderColor="#7f818d    "                  
@@ -46,9 +41,11 @@
                     CornerRadius="10"
                     WidthRequest="10"
                     HeightRequest="50"></Button>
-            
+
+
+
         </StackLayout>
     </StackLayout>
-    
-  
+
+
 </ContentPage>
